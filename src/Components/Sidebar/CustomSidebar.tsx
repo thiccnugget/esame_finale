@@ -1,28 +1,34 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const CustomSidebar = () => {
   return (
-    <Nav className="d-hidden col-md-3 col-lg-2 bg-light sidebar" style={{ height: '100vh' }}>
+    <Nav className="d-hidden bg-light sidebar" style={{ height: 'max-co' }}>
       <div className="position-sticky">
+        <h2>Categories</h2>
         <ul className="nav flex-column">
           <li className="nav-item">
-            <Link className="nav-link active" to="/">
-              Dashboard
+            <Link className="nav-link" to={`/products/jewelery`}>
+              Jewelery
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/orders">
-              Orders
+          <li className="nav-item" >
+            <Link className="nav-link" to={`/products/electronics`}>
+             Electronics
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/products">
-              Products
+          <li className="nav-item" >
+            <Link className="nav-link" to={`/products/women's clothing`}>
+              Women's Clothing
             </Link>
           </li>
-          {/* Add more sidebar items with Link components */}
+          <li className="nav-item" >
+            <Link className="nav-link" to={`/products/men's clothing`}>
+              Men's Clothing
+            </Link>
+          </li>
         </ul>
       </div>
     </Nav>

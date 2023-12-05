@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     justify-content: right;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .navbar a {
@@ -13,5 +15,5 @@
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the glow effect as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }

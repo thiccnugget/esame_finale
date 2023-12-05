@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CustomToast from './Components/Toast/CustomToast';
 import CustomCard from './Components/Card/CustomCard';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Placeholder } from 'react-bootstrap';
 import CustomNavbar from './Components/Navbar/CustomNavbar';
 import CustomFooter from './Components/Footer/CustomFooter';
@@ -16,24 +16,34 @@ import Product from './Pages/SingleProduct';
 function App() {
   return (
     <BrowserRouter>
+      <Container className='col-md-6'>
         <CustomNavbar />
-        <Container className='col-md-6'>
-          <Routes>
-              <Route
-                  path="/products"
-                  element={<Products />}
-              />
-              <Route
-                  path="/contact/:id"
-                  element={<Contacts />}
-              />
-              <Route
-                  path="/product/:id"
-                  element={<Product />}
-              />
-          </Routes>
-        </Container>
-        <CustomFooter />
+        
+            <Routes>
+                <Route 
+                  path="/" 
+                  element={<Products />} 
+                />
+                <Route 
+                  path="/products" 
+                  element={<Products />} 
+                />
+                <Route
+                    path="/products/:category"
+                    element={<Products />}
+                />
+                <Route
+                    path="/contact/:id"
+                    element={<Contacts />}
+                />
+                <Route
+                    path="/product/:id"
+                    element={<Product />}
+                />
+
+            </Routes>
+      </Container>
+      <CustomFooter />
     </BrowserRouter>
   );
 }

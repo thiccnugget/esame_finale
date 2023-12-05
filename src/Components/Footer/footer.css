@@ -2,6 +2,6 @@
     padding: 0px 0;
     position: absolute;
     width: 100%;
-    z-index: 1; /* Adjust the z-index as needed to ensure it's above other content */
+    z-index: 1; 
   }
   

@@ -1,0 +1,54 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: #fff; 
+}
+
+.left {
+    flex-grow: 1;
+}
+
+.right{
+    display: flex;
+    justify-content: space-around;
+}
+
+.right button {
+    background-color: #9924ff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.contact-button {
+    background-color: #9924ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.contact-button:hover {
+    background-color: #218838;
+}
+
+
+.footer-center{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}

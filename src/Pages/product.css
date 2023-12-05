@@ -1,0 +1,57 @@
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-details {
+    padding: 0px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product-details h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-link a {
+    font-size: 18px;
+    text-decoration: none;
+    color: gray; 
+}
+
+.contact-link a:hover {
+    text-decoration: underline;
+}
+
+.product-card {
+    border: none;
+}
+
+.product-card .card-title {
+    border-top: 2px solid gray; 
+    padding-top: 10px;
+}
+
+.product-card {
+    border: none;
+    z-index: 1;
+}
+
+.product-category {
+    text-align: left;
+    margin: 10px 15px;
+}

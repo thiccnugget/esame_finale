@@ -1,7 +1,7 @@
 .custom-toast {
     position: fixed;
-    top: 80px; /* Adjust this value to position it below the navbar */
-    right: 10px; /* Adjust this value to control the distance from the right edge */
-    z-index: 1000; /* Set a high z-index to ensure it's displayed over other components */
+    top: 80px; 
+    right: 10px; 
+    z-index: 1000;
   }
   

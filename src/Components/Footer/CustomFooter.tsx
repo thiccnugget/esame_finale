@@ -9,7 +9,7 @@ const CustomFooter: React.FC = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <h5>Your Company</h5>
+            <h5>Shop4All</h5>
             <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
           </Col>
           <Col md={6}>

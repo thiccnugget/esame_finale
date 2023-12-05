@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Toast, Button, ProgressBar } from 'react-bootstrap';
 import './toast.css';
 
-const CustomToast = (props: { title: string, description: string }) => {
+const CustomToast = (props: { title: string, description: string, show?: boolean }) => {
   const {title, description} = props;
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(props.show);
   const [timerPaused, setTimerPaused] = useState(false);
   const [progress, setProgress] = useState(100);
 
-  // Close the toast when the close button is clicked
   const handleClose = () => setShow(false);
 
-  // Start or stop the timer based on timerPaused state
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
@@ -34,12 +32,10 @@ const CustomToast = (props: { title: string, description: string }) => {
     };
   }, [timerPaused]);
 
-  // Prevent the toast from closing when the cursor enters the toast area
   const handleToastMouseEnter = () => {
     setTimerPaused(true);
   };
 
-  // Allow the toast to close when the cursor leaves the toast area
   const handleToastMouseLeave = () => {
     setTimerPaused(false);
   };

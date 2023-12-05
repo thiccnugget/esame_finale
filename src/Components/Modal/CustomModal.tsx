@@ -1,34 +1,22 @@
-import React, { useState } from 'react';
+
+
+ 
+
+import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-const CustomModal = (props: { title: string, bodyText: string }) => {
- const [show, setShow] = useState(false);
-
- const handleClose = () => setShow(false);
- const handleShow = () => setShow(true);
-
- return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>{props.title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{props.bodyText}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
- );
-}
+const CustomModal = (props: { content?: string, show:boolean, handleClose: () => void }) => {
+  const {content, show, handleClose} = props;
+  return (
+        <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Phone number</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <p>{content}</p>
+            </Modal.Body>
+        </Modal>
+    );
+};
 
 export default CustomModal;
