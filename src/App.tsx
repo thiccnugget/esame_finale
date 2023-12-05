@@ -1,25 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CustomToast from './Components/Toast/CustomToast';
+import CustomCard from './Components/Card/CustomCard';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Placeholder } from 'react-bootstrap';
+import CustomNavbar from './Components/Navbar/CustomNavbar';
+import CustomFooter from './Components/Footer/CustomFooter';
+import Sidebar from './Components/Sidebar/CustomSidebar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <CustomNavbar />
+        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
+        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
+        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
+
+        <Routes>
+            <Route
+                path="/"
+                element={<Placeholder />}
+            />
+            <Route
+                path="/contact"
+                element={<Placeholder />}
+            />
+        </Routes>
+
+        <CustomFooter />
+    </BrowserRouter>
   );
 }
 
