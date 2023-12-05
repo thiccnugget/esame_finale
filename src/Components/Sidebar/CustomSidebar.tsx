@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CustomSidebar = () => {
   return (
-    <Nav className="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+    <Nav className="d-hidden col-md-3 col-lg-2 bg-light sidebar" style={{ height: '100vh' }}>
       <div className="position-sticky">
         <ul className="nav flex-column">
           <li className="nav-item">

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CustomNavbar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="light" variant="light" expand="lg">
       <Link to="/">
         <Navbar.Brand className="mx-3">
           <img

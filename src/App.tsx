@@ -4,30 +4,35 @@ import './App.css';
 import CustomToast from './Components/Toast/CustomToast';
 import CustomCard from './Components/Card/CustomCard';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Placeholder } from 'react-bootstrap';
+import { Container, Placeholder } from 'react-bootstrap';
 import CustomNavbar from './Components/Navbar/CustomNavbar';
 import CustomFooter from './Components/Footer/CustomFooter';
 import Sidebar from './Components/Sidebar/CustomSidebar';
+import CustomSidebar from './Components/Sidebar/CustomSidebar';
+import Products from './Pages/Products';
+import Contacts from './Pages/Contacts';
+import Product from './Pages/SingleProduct';
 
 function App() {
   return (
     <BrowserRouter>
         <CustomNavbar />
-        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
-        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
-        <CustomToast title="warning" description='helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!' />
-
-        <Routes>
-            <Route
-                path="/"
-                element={<Placeholder />}
-            />
-            <Route
-                path="/contact"
-                element={<Placeholder />}
-            />
-        </Routes>
-
+        <Container className='col-md-6'>
+          <Routes>
+              <Route
+                  path="/products"
+                  element={<Products />}
+              />
+              <Route
+                  path="/contact/:id"
+                  element={<Contacts />}
+              />
+              <Route
+                  path="/product/:id"
+                  element={<Product />}
+              />
+          </Routes>
+        </Container>
         <CustomFooter />
     </BrowserRouter>
   );

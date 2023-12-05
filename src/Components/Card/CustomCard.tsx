@@ -1,20 +1,25 @@
 import React from 'react';
-import { Button, Card, CardImg } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const CustomCard = (props: { title: string, content: string, img?:string } ) => {
-    const {title, content, img} = props;
-    return(
-        <Card style={{ width: '18rem' }}>
-        {img && <Card.Img variant="top" src={img} />}
-        <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>
-                {content}
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+const CustomCard = (props: { title: string, price: number, id: number, img?: string }) => {
+  const { title, price, id, img } = props;
+  return (
+    <Card className='col-12 col-md-12 col-lg-10' style={{ height: '100%' }}>
+      <div className="row">
+        {img && (
+          <Card.Img src={img} style={{ height: '6rem', width: 'auto' }} className="col-md-6 pl-5 p-3" />
+        )}
+        <Card.Body className="col-6">
+          <Card.Title style={{ fontSize: '16px' }}>{title}</Card.Title>
+          <div className="d-flex">
+            <Card.Text className='mr-4'>€{price}  </Card.Text>
+            <Link to={'/contact/' + id}>  Contact</Link>
+          </div>
         </Card.Body>
-        </Card>
-    )
+      </div>
+    </Card>
+  );
 };
 
 export default CustomCard;

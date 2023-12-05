@@ -1,6 +1,7 @@
-.custom-footer{
-    position:absolute;
-    left:0;
-    bottom:0;
-    right:0;
-}
+.custom-footer {
+    padding: 0px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1; /* Adjust the z-index as needed to ensure it's above other content */
+  }
+  
